@@ -1,0 +1,8 @@
+Lignes brutes lues        : 80331
+Produits après nettoyage  : 18891
+Ingrédients distincts     : 44249
+Produits avec allergènes  : 12218
+Produits avec marqueurs   : 10824
+
+Source : Open Beauty Facts (ODbL) - attribution obligatoire.
+Les marqueurs sensibles sont INDICATIFS et doivent être validés par un pharmacien.
