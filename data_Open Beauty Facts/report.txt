@@ -1,4 +1,5 @@
 Lignes brutes lues        : 80331
+Caractères illisibles corrigés : 958
 Produits après nettoyage  : 18891
 Ingrédients distincts     : 44249
 Produits avec allergènes  : 12218

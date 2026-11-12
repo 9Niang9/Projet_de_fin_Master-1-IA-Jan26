@@ -137,11 +137,11 @@ def main() -> None:
     df = df.drop(columns=["brands_en"], errors="ignore")
     n_raw = len(df)
 
+    text_columns = df.columns
     replacement_chars = sum(
-        int(df[col].str.count("\ufffd").sum())
-        for col in df.select_dtypes(include="object")
+        int(df[col].str.count("\ufffd").sum()) for col in text_columns
     )
-    for col in df.select_dtypes(include="object"):
+    for col in text_columns:
         df[col] = df[col].str.replace("\ufffd", " ", regex=False)
         df[col] = df[col].str.replace(r"\s+", " ", regex=True).str.strip()
 
