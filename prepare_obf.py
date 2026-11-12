@@ -184,4 +184,14 @@ def main() -> None:
         f"Produits après nettoyage  : {len(df)}",
         f"Ingrédients distincts     : {len(freq)}",
         f"Produits avec allergènes  : {(df['allergens'].str.len() > 0).sum()}",
-        f"Produits avec marqueurs   : {(df[
+        f"Produits avec marqueurs   : {(df['sensitive_flags'].str.len() > 0).sum()}",
+        "",
+        "Source : Open Beauty Facts (ODbL) - attribution obligatoire.",
+        "Les marqueurs sensibles sont INDICATIFS et doivent être validés par un pharmacien.",
+    ]
+    (DATA_DIR / "report.txt").write_text("\n".join(report), encoding="utf-8")
+    print("\n".join(report))
+
+
+if __name__ == "__main__":
+    main()
